@@ -1,0 +1,15 @@
+# Flutter gen_l10n configuration.
+# Run `flutter gen-l10n` (or just `flutter run`) to regenerate after editing ARB files.
+# Output is written to lib/l10n/ — import via:
+#   import 'package:dz_immobilier/l10n/app_localizations.dart';
+
+arb-dir: lib/l10n/arb
+template-arb-file: app_fr.arb
+output-localization-file: app_localizations.dart
+output-class: AppLocalizations
+output-dir: lib/l10n
+nullable-getter: false
+preferred-supported-locales:
+  - fr
+  - ar
+  - en

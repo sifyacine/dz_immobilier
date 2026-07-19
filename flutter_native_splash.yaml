@@ -1,0 +1,18 @@
+flutter_native_splash:
+  # Federal navy background — gradient icon glows against it.
+  color: "#0A0A41"
+  image: assets/logo/logo-dz-immobilier-icon.png
+
+  # Android 12+ adaptive-icon splash
+  android_12:
+    image: assets/logo/logo-dz-immobilier-icon.png
+    icon_background_color: "#0A0A41"
+    color: "#0A0A41"
+
+  # Dark-mode variant (same treatment)
+  color_dark: "#0A0A41"
+  image_dark: assets/logo/logo-dz-immobilier-icon.png
+
+  android: true
+  ios: true
+  web: false

@@ -1,0 +1,651 @@
+{
+  "@@locale": "fr",
+
+  "appName": "DZ Immobilier",
+  "@appName": {
+    "description": "Nom de l'application affiché dans la barre de titre"
+  },
+
+  "appTagline": "Le marché immobilier algérien",
+  "@appTagline": {
+    "description": "Sous-titre court affiché sur l'écran d'accueil"
+  },
+
+  "commonContinue": "Continuer",
+  "@commonContinue": {
+    "description": "Bouton action principale — passer à l'étape suivante"
+  },
+
+  "commonBack": "Retour",
+  "@commonBack": {
+    "description": "Bouton retour"
+  },
+
+  "commonNext": "Suivant",
+  "@commonNext": {
+    "description": "Bouton étape suivante d'un assistant"
+  },
+
+  "commonSave": "Enregistrer",
+  "@commonSave": {},
+
+  "commonCancel": "Annuler",
+  "@commonCancel": {},
+
+  "commonClose": "Fermer",
+  "@commonClose": {},
+
+  "commonRetry": "Réessayer",
+  "@commonRetry": {},
+
+  "commonSearch": "Rechercher",
+  "@commonSearch": {},
+
+  "commonLoading": "Chargement…",
+  "@commonLoading": {
+    "description": "Indicateur de chargement générique"
+  },
+
+  "commonError": "Une erreur s'est produite",
+  "@commonError": {
+    "description": "Message d'erreur générique affiché lorsqu'une opération échoue"
+  },
+
+  "commonSeeAll": "Voir tout",
+  "@commonSeeAll": {},
+
+  "commonRestart": "Recommencer",
+  "@commonRestart": {},
+
+  "commonSubmit": "Valider",
+  "@commonSubmit": {},
+
+  "commonConfirm": "Confirmer",
+  "@commonConfirm": {},
+
+  "commonDelete": "Supprimer",
+  "@commonDelete": {},
+
+  "commonEdit": "Modifier",
+  "@commonEdit": {},
+
+  "commonShare": "Partager",
+  "@commonShare": {},
+
+  "commonPublish": "Publier",
+  "@commonPublish": {},
+
+  "commonFilters": "Filtres",
+  "@commonFilters": {},
+
+  "commonSort": "Trier",
+  "@commonSort": {},
+
+  "commonRequired": "Champ requis",
+  "@commonRequired": {
+    "description": "Message de validation pour un champ obligatoire vide"
+  },
+
+  "commonFieldInvalid": "Valeur incorrecte",
+  "@commonFieldInvalid": {},
+
+  "commonNetworkError": "Vérifiez votre connexion internet",
+  "@commonNetworkError": {
+    "description": "Erreur réseau générique"
+  },
+
+  "commonOffline": "Vous êtes hors ligne",
+  "@commonOffline": {},
+
+  "commonSoonAvailable": "Bientôt disponible",
+  "@commonSoonAvailable": {},
+
+  "commonItemCount": "{count, plural, =0{Aucun bien} =1{1 bien} other{{count} biens}}",
+  "@commonItemCount": {
+    "description": "Nombre de biens immobiliers",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "decimalPattern"
+      }
+    }
+  },
+
+  "commonWelcome": "Bienvenue, {name} !",
+  "@commonWelcome": {
+    "description": "Message de bienvenue personnalisé",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+
+  "navHome": "Accueil",
+  "@navHome": { "description": "Onglet navigation — liste des biens" },
+
+  "navSearch": "Recherche",
+  "@navSearch": { "description": "Onglet navigation — recherche" },
+
+  "navPublish": "Publier",
+  "@navPublish": { "description": "FAB — publier un bien" },
+
+  "navFavorites": "Favoris",
+  "@navFavorites": { "description": "Onglet navigation — biens favoris" },
+
+  "navAccount": "Compte",
+  "@navAccount": { "description": "Onglet navigation — profil utilisateur" },
+
+  "authLoginTitle": "Bon retour !",
+  "@authLoginTitle": {},
+
+  "authLoginSubtitle": "Connectez-vous pour accéder à votre espace",
+  "@authLoginSubtitle": {},
+
+  "authRegisterTitle": "Créer un compte",
+  "@authRegisterTitle": {},
+
+  "authForgotPasswordTitle": "Mot de passe oublié",
+  "@authForgotPasswordTitle": {},
+
+  "authEmailLabel": "Email",
+  "@authEmailLabel": {},
+
+  "authPasswordLabel": "Mot de passe",
+  "@authPasswordLabel": {},
+
+  "authNameLabel": "Nom complet",
+  "@authNameLabel": {},
+
+  "authPhoneLabel": "Téléphone",
+  "@authPhoneLabel": {},
+
+  "authLoginBtn": "Se connecter",
+  "@authLoginBtn": {},
+
+  "authRegisterBtn": "Créer mon compte",
+  "@authRegisterBtn": {},
+
+  "authForgotPasswordLink": "Mot de passe oublié ?",
+  "@authForgotPasswordLink": {},
+
+  "authNoAccount": "Pas encore de compte ?",
+  "@authNoAccount": {},
+
+  "authAlreadyAccount": "Déjà un compte ?",
+  "@authAlreadyAccount": {},
+
+  "authSignIn": "Se connecter",
+  "@authSignIn": {},
+
+  "authSignUp": "Créer un compte",
+  "@authSignUp": {},
+
+  "authLogout": "Se déconnecter",
+  "@authLogout": {},
+
+  "authGuestCta": "Connectez-vous pour profiter de toutes les fonctionnalités",
+  "@authGuestCta": {},
+
+  "propertiesTitle": "Annonces immobilières",
+  "@propertiesTitle": { "description": "Titre de l'écran liste des biens" },
+
+  "propertiesEmpty": "Aucune annonce disponible pour le moment",
+  "@propertiesEmpty": {},
+
+  "propertiesRefresh": "Actualiser",
+  "@propertiesRefresh": {},
+
+  "propertiesForSale": "Vente",
+  "@propertiesForSale": {},
+
+  "propertiesForRent": "Location",
+  "@propertiesForRent": {},
+
+  "propertiesForHoliday": "Saisonnier",
+  "@propertiesForHoliday": {},
+
+  "propertyDetailTitle": "Détails du bien",
+  "@propertyDetailTitle": {},
+
+  "propertyDetailAddToFavorites": "Ajouter aux favoris",
+  "@propertyDetailAddToFavorites": {},
+
+  "propertyDetailRemoveFromFavorites": "Retirer des favoris",
+  "@propertyDetailRemoveFromFavorites": {},
+
+  "propertyDetailContact": "Contacter l'annonceur",
+  "@propertyDetailContact": {},
+
+  "propertyDetailShare": "Partager ce bien",
+  "@propertyDetailShare": {},
+
+  "propertyDetailSurface": "Surface",
+  "@propertyDetailSurface": {},
+
+  "propertyDetailRooms": "Pièces",
+  "@propertyDetailRooms": {},
+
+  "propertyDetailBedrooms": "Chambres",
+  "@propertyDetailBedrooms": {},
+
+  "propertyDetailFloor": "Étage",
+  "@propertyDetailFloor": {},
+
+  "propertyDetailPublishedOn": "Publié le {date}",
+  "@propertyDetailPublishedOn": {
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+
+  "searchTitle": "Rechercher un bien",
+  "@searchTitle": {},
+
+  "searchHint": "Localisation, type de bien…",
+  "@searchHint": {},
+
+  "searchNoResults": "Aucun résultat pour cette recherche",
+  "@searchNoResults": {},
+
+  "searchFiltersTitle": "Filtres de recherche",
+  "@searchFiltersTitle": {},
+
+  "searchApplyFilters": "Appliquer les filtres",
+  "@searchApplyFilters": {},
+
+  "searchResetFilters": "Réinitialiser",
+  "@searchResetFilters": {},
+
+  "favoritesTitle": "Mes favoris",
+  "@favoritesTitle": {},
+
+  "favoritesEmpty": "Vous n'avez pas encore de favoris",
+  "@favoritesEmpty": {},
+
+  "favoritesEmptyCta": "Explorez les annonces et sauvegardez vos préférées",
+  "@favoritesEmptyCta": {},
+
+  "profileTitle": "Mon compte",
+  "@profileTitle": {},
+
+  "profileMyListings": "Mes annonces",
+  "@profileMyListings": {},
+
+  "profileMyBookings": "Mes réservations",
+  "@profileMyBookings": {},
+
+  "profileMyAlerts": "Mes alertes",
+  "@profileMyAlerts": {},
+
+  "profileSettings": "Paramètres",
+  "@profileSettings": {},
+
+  "profileLanguage": "Langue",
+  "@profileLanguage": {},
+
+  "profileHelp": "Aide et support",
+  "@profileHelp": {},
+
+  "profileAbout": "À propos de DZ Immobilier",
+  "@profileAbout": {},
+
+  "estimationTitle": "Estimer en 30 secondes",
+  "@estimationTitle": {},
+
+  "estimationSubtitle": "Réponse instantanée en 4 questions",
+  "@estimationSubtitle": {},
+
+  "estimationRestart": "Recommencer",
+  "@estimationRestart": {},
+
+  "estimationStepLocation": "ÉTAPE 1 · LOCALISATION",
+  "@estimationStepLocation": {},
+
+  "estimationStepType": "ÉTAPE 2 · TYPE DE BIEN",
+  "@estimationStepType": {},
+
+  "estimationStepSurface": "ÉTAPE 3 · SURFACE",
+  "@estimationStepSurface": {},
+
+  "estimationStepHighlights": "ÉTAPE 4 · POINTS FORTS",
+  "@estimationStepHighlights": {},
+
+  "estimationStepContact": "DERNIÈRE ÉTAPE · CONTACT",
+  "@estimationStepContact": {},
+
+  "estimationSeeResult": "Voir mon estimation",
+  "@estimationSeeResult": {},
+
+  "simulationTitle": "Simulez votre financement",
+  "@simulationTitle": {},
+
+  "simulationSubtitle": "Trouvez le crédit adapté à votre profil",
+  "@simulationSubtitle": {},
+
+  "simulationStepType": "ÉTAPE 1 · TYPE DE BIEN",
+  "@simulationStepType": {},
+
+  "simulationStepBudget": "ÉTAPE 2 · BUDGET",
+  "@simulationStepBudget": {},
+
+  "simulationStepIncome": "ÉTAPE 3 · REVENUS",
+  "@simulationStepIncome": {},
+
+  "simulationStepContact": "DERNIÈRE ÉTAPE · CONTACT",
+  "@simulationStepContact": {},
+
+  "simulationSeeOffers": "Voir les offres",
+  "@simulationSeeOffers": {},
+
+  "simulationCalculate": "Calculer mes offres",
+  "@simulationCalculate": {},
+
+  "simulationResultTitle": "Vos offres de financement",
+  "@simulationResultTitle": {},
+
+  "simulationNewSimulation": "Nouvelle simulation",
+  "@simulationNewSimulation": {},
+
+  "simulationConfirmation": "Demande envoyée — un conseiller DZ-Immobilier vous contactera dans les 24 heures.",
+  "@simulationConfirmation": {},
+
+  "settingsLanguageTitle": "Choisir la langue",
+  "@settingsLanguageTitle": {},
+
+  "settingsLanguageFr": "Français",
+  "@settingsLanguageFr": {},
+
+  "settingsLanguageAr": "عربي",
+  "@settingsLanguageAr": {},
+
+  "settingsLanguageEn": "English",
+  "@settingsLanguageEn": {},
+
+  "commonOr": "ou",
+  "@commonOr": {},
+  "commonClear": "Effacer",
+  "@commonClear": {},
+  "commonAll": "Tous",
+  "@commonAll": {},
+  "commonAllF": "Toutes",
+  "@commonAllF": { "description": "« Tous » au féminin (ex. toutes les wilayas)" },
+  "commonApply": "Appliquer",
+  "@commonApply": {},
+  "commonErrorTitle": "Erreur",
+  "@commonErrorTitle": { "description": "Titre court d'une notification d'erreur" },
+  "commonPerMonth": "/mois",
+  "@commonPerMonth": { "description": "Suffixe de prix pour une location mensuelle" },
+
+  "authRegisterSubtitle": "Rejoignez DZ Immobilier en quelques secondes.",
+  "@authRegisterSubtitle": {},
+  "authForgotPasswordSubtitle": "Entrez votre e-mail pour recevoir un lien de réinitialisation.",
+  "@authForgotPasswordSubtitle": {},
+  "authEmailHint": "exemple@email.com",
+  "@authEmailHint": {},
+  "authNameHint": "Votre prénom et nom",
+  "@authNameHint": {},
+  "authPhoneHint": "06 XX XX XX XX",
+  "@authPhoneHint": {},
+  "authConfirmPasswordLabel": "Confirmer le mot de passe",
+  "@authConfirmPasswordLabel": {},
+  "authSendResetLink": "Envoyer le lien",
+  "@authSendResetLink": {},
+  "authBackToLogin": "Retour à la connexion",
+  "@authBackToLogin": {},
+  "authResetSentTitle": "E-mail envoyé !",
+  "@authResetSentTitle": {},
+  "authResetSentBody": "Un lien de réinitialisation a été envoyé à {email}. Vérifiez votre boîte de réception.",
+  "@authResetSentBody": { "placeholders": { "email": { "type": "String" } } },
+
+  "valEmailRequired": "Email requis",
+  "@valEmailRequired": {},
+  "valEmailInvalid": "Email invalide",
+  "@valEmailInvalid": {},
+  "valPasswordRequired": "Mot de passe requis",
+  "@valPasswordRequired": {},
+  "valPasswordMin": "Au moins 8 caractères",
+  "@valPasswordMin": {},
+  "valPhoneRequired": "Téléphone requis",
+  "@valPhoneRequired": {},
+  "valPhoneInvalid": "Numéro invalide",
+  "@valPhoneInvalid": {},
+  "valNameRequired": "Le nom est requis",
+  "@valNameRequired": {},
+  "valConfirmRequired": "Confirmation requise",
+  "@valConfirmRequired": {},
+  "valPasswordMismatch": "Les mots de passe ne correspondent pas",
+  "@valPasswordMismatch": {},
+
+  "homeEstimationAction": "Estimation",
+  "@homeEstimationAction": {},
+  "homeEstimationSubtitle": "Valeur de votre bien",
+  "@homeEstimationSubtitle": {},
+  "homeSimulationAction": "Simulation",
+  "@homeSimulationAction": {},
+  "homeSimulationSubtitle": "Crédit immobilier",
+  "@homeSimulationSubtitle": {},
+  "propertiesLoadMore": "Voir plus ({count} restants)",
+  "@propertiesLoadMore": { "placeholders": { "count": { "type": "int" } } },
+
+  "propertyBadgeSale": "À vendre",
+  "@propertyBadgeSale": {},
+  "propertyBadgeRent": "À louer",
+  "@propertyBadgeRent": {},
+  "propertyCardSpecs": "{rooms} Ch · {area} m²",
+  "@propertyCardSpecs": { "placeholders": { "rooms": { "type": "int" }, "area": { "type": "int" } } },
+
+  "searchBarHint": "Wilaya, quartier, mot-clé…",
+  "@searchBarHint": {},
+  "searchRecent": "Recherches récentes",
+  "@searchRecent": {},
+  "searchPopularCities": "Villes populaires",
+  "@searchPopularCities": {},
+  "searchAllListings": "Toutes les annonces",
+  "@searchAllListings": {},
+  "searchResultsCount": "{count, plural, =0{Aucun bien trouvé} =1{1 bien trouvé} other{{count} biens trouvés}}",
+  "@searchResultsCount": { "placeholders": { "count": { "type": "num", "format": "decimalPattern" } } },
+  "searchNoResultsTitle": "Aucun résultat",
+  "@searchNoResultsTitle": {},
+  "searchNoResultsBody": "Nous n'avons trouvé aucun bien correspondant à vos critères de recherche.",
+  "@searchNoResultsBody": {},
+  "searchResetFiltersBtn": "Réinitialiser les filtres",
+  "@searchResetFiltersBtn": {},
+  "searchDetailSoon": "Détails du bien bientôt disponibles.",
+  "@searchDetailSoon": {},
+
+  "filterTransactionType": "Type de transaction",
+  "@filterTransactionType": {},
+  "filterCategory": "Catégorie",
+  "@filterCategory": {},
+  "filterWilaya": "Wilaya",
+  "@filterWilaya": {},
+  "filterBudget": "Budget (DA)",
+  "@filterBudget": {},
+  "filterPriceMin": "Prix Min",
+  "@filterPriceMin": {},
+  "filterPriceMax": "Prix Max",
+  "@filterPriceMax": {},
+  "filterPriceMinHint": "ex : 10 000 000",
+  "@filterPriceMinHint": {},
+  "filterPriceMaxHint": "ex : 80 000 000",
+  "@filterPriceMaxHint": {},
+  "filterBedroomsMin": "Chambres min",
+  "@filterBedroomsMin": {},
+  "filterAreaMin": "Superficie min (m²)",
+  "@filterAreaMin": {},
+  "filterAreaHint": "ex : 80",
+  "@filterAreaHint": {},
+
+  "propertyTypeApartment": "Appartement",
+  "@propertyTypeApartment": {},
+  "propertyTypeVilla": "Villa",
+  "@propertyTypeVilla": {},
+  "propertyTypeLand": "Terrain",
+  "@propertyTypeLand": {},
+  "propertyTypeStudio": "Studio",
+  "@propertyTypeStudio": {},
+
+  "commonStepProgress": "Étape {current} / {total}",
+  "@commonStepProgress": { "placeholders": { "current": { "type": "int" }, "total": { "type": "int" } } },
+  "commonSelect": "Sélectionner",
+  "@commonSelect": {},
+  "commonYears": "{count} ans",
+  "@commonYears": { "placeholders": { "count": { "type": "int" } } },
+
+  "simStep1Prefix": "Simulez votre",
+  "@simStep1Prefix": {},
+  "simStep1Accent": "financement.",
+  "@simStep1Accent": {},
+  "simStep2Prefix": "Quel est votre",
+  "@simStep2Prefix": {},
+  "simStep2Accent": "budget ?",
+  "@simStep2Accent": {},
+  "simStep3Prefix": "Parlez-nous",
+  "@simStep3Prefix": {},
+  "simStep3Accent": "de vous.",
+  "@simStep3Accent": {},
+  "simStep4Prefix": "Un conseiller",
+  "@simStep4Prefix": {},
+  "simStep4Accent": "vous rappelle.",
+  "@simStep4Accent": {},
+
+  "simSelectPropertyType": "SÉLECTIONNER LE TYPE DE BIEN",
+  "@simSelectPropertyType": {},
+  "simInfoAnalysisBody": "analyse les données du marché local avant chaque recommandation — taux, durées et conditions d'éligibilité ajustés en temps réel selon votre profil.",
+  "@simInfoAnalysisBody": {},
+  "simStateProgramQuestion": "Est-ce un programme de l'État ?",
+  "@simStateProgramQuestion": {},
+  "simStateYes": "Oui (LPP, LPA, LSP)",
+  "@simStateYes": {},
+  "simStateNo": "Non (Libre)",
+  "@simStateNo": {},
+  "simStateNote": "*Le taux à 1% ou 3% ne s'applique qu'aux programmes agréés.",
+  "@simStateNote": {},
+
+  "simPropertyPriceLabel": "PRIX DU BIEN (DZD)",
+  "@simPropertyPriceLabel": {},
+  "simPropertyPriceHint": "15 000 000",
+  "@simPropertyPriceHint": {},
+  "simDownPaymentLabel": "VOTRE APPORT (DZD)",
+  "@simDownPaymentLabel": {},
+  "simDownPaymentHint": "3 000 000",
+  "@simDownPaymentHint": {},
+  "simLeverageTitle": "Effet de levier de l'apport :",
+  "@simLeverageTitle": {},
+  "simLeverageMin": "Apport légal minimum : 10% du prix du bien (réglementation Banque d'Algérie).",
+  "@simLeverageMin": {},
+  "simLeverageRec": "Apport recommandé : 20% à 30% pour des conditions optimales.",
+  "@simLeverageRec": {},
+  "simLeverageEff": "Effet quantifié : sur un bien à 10M DZD, passer de 10% à 30% d'apport économise ~2,5M DZD au coût total sur 20 ans.",
+  "@simLeverageEff": {},
+
+  "simMonthlyIncomeLabel": "REVENU MENSUEL NET (DZD)",
+  "@simMonthlyIncomeLabel": {},
+  "simIncomeHint": "120 000",
+  "@simIncomeHint": {},
+  "simAgeLabel": "ÂGE",
+  "@simAgeLabel": {},
+  "simAgeHint": "35",
+  "@simAgeHint": {},
+  "simEmploymentTypeLabel": "TYPE D'EMPLOI",
+  "@simEmploymentTypeLabel": {},
+  "simEmpSalaried": "Salarié",
+  "@simEmpSalaried": {},
+  "simEmpCivilServant": "Fonctionnaire",
+  "@simEmpCivilServant": {},
+  "simEmpSelfEmployed": "Auto-entrepreneur",
+  "@simEmpSelfEmployed": {},
+  "simEmpBusinessOwner": "Chef d'entreprise",
+  "@simEmpBusinessOwner": {},
+  "simStateTiersTitle": "Paliers de l'aide de l'État :",
+  "@simStateTiersTitle": {},
+  "simIncomeTier1": "Revenu ≤ 108 000 DZD → taux à 1%",
+  "@simIncomeTier1": {},
+  "simIncomeTier2": "Revenu ≤ 216 000 DZD → taux à 3%",
+  "@simIncomeTier2": {},
+  "simIncomeAboveMarket": "Au-dessus → financement marché libre (~6,25%)",
+  "@simIncomeAboveMarket": {},
+  "simAgeLimitTitle": "Limite réglementaire d'âge :",
+  "@simAgeLimitTitle": {},
+  "simAgeLimitBody": "L'âge en fin de prêt ne peut dépasser 75 ans (Banque d'Algérie). À votre âge, la durée maximale du prêt est de {term} ans.",
+  "@simAgeLimitBody": { "placeholders": { "term": { "type": "int" } } },
+
+  "simFullNameLabel": "NOM COMPLET",
+  "@simFullNameLabel": {},
+  "simFullNameHint": "Mohamed Amine",
+  "@simFullNameHint": {},
+  "simPhoneLabel": "TÉLÉPHONE",
+  "@simPhoneLabel": {},
+  "simPhoneHint": "+213 5XX XX XX XX · +33 6 XX XX XX XX",
+  "@simPhoneHint": {},
+  "simEmailLabel": "EMAIL (OPTIONNEL)",
+  "@simEmailLabel": {},
+  "simEmailHint": "contact@email.dz",
+  "@simEmailHint": {},
+  "simPrivacyNotice": "Vos données sont confidentielles et utilisées uniquement pour vous envoyer votre simulation personnalisée. Aucune communication commerciale sans votre consentement.",
+  "@simPrivacyNotice": {},
+
+  "simResultSubtitle": "Simulation personnalisée basée sur votre profil",
+  "@simResultSubtitle": {},
+  "simResultLoading": "Calcul de vos offres en cours…",
+  "@simResultLoading": {},
+  "simResultBadge": "RÉSULTATS · COMPARAISON ÉDUCATIVE",
+  "@simResultBadge": {},
+  "simDuelPrefix": "Le Duel :",
+  "@simDuelPrefix": {},
+  "simDuelAccent": "Conventionnel\nvs Mourabaha.",
+  "@simDuelAccent": {},
+  "simLoanConventional": "PRÊT CONVENTIONNEL",
+  "@simLoanConventional": {},
+  "simLoanMourabaha": "MOURABAHA ISLAMIQUE",
+  "@simLoanMourabaha": {},
+  "simDaPerMonth": "DA/mois",
+  "@simDaPerMonth": {},
+  "simRateLabel": "Taux :",
+  "@simRateLabel": {},
+  "simDurationLabel": "Durée :",
+  "@simDurationLabel": {},
+  "simDurationValue": "{years} ans ({months} mensualités)",
+  "@simDurationValue": { "placeholders": { "years": { "type": "int" }, "months": { "type": "int" } } },
+  "simTotalInterest": "Intérêts totaux",
+  "@simTotalInterest": {},
+  "simTotalMargin": "Marge totale",
+  "@simTotalMargin": {},
+  "simHowItWorks": "ℹ️ Comment ça marche ?",
+  "@simHowItWorks": {},
+  "simHowConventional": "La banque vous prête de l'argent. Vous remboursez le capital + intérêts calculés sur le solde restant chaque mois (méthode des intérêts composés).",
+  "@simHowConventional": {},
+  "simHowMourabaha": "La banque achète le bien pour vous, puis vous le revend avec une marge connue à l'avance. Pas de Riba variable. Structure juridique : contrat achat-revente.",
+  "@simHowMourabaha": {},
+  "simExpertAnalysis": "Analyse DZ-Immobilier Expert",
+  "@simExpertAnalysis": {},
+  "simExpertBody": "L'écart entre les deux modèles est de {gap} pour la Mourabaha par rapport au prêt conventionnel.\nConclusion : Si le coût final est souvent proche, la structure juridique est fondamentalement différente : le prêt conventionnel est un contrat de prêt d'argent (Qard), tandis que la Mourabaha est un contrat achat-revente (Bay'). Ce choix dépend autant de vos convictions personnelles que de votre calcul financier.",
+  "@simExpertBody": { "placeholders": { "gap": { "type": "String" } } },
+  "simDebtRatioLabel": "Taux d'endettement",
+  "@simDebtRatioLabel": {},
+  "simDebtExceeded": "Capacité d'endettement dépassée. Solutions : augmenter l'apport, prolonger la durée, ou ajouter un co-emprunteur.",
+  "@simDebtExceeded": {},
+  "simBankOffersTitle": "Offres par banque partenaire",
+  "@simBankOffersTitle": {},
+  "simBankColumn": "Banque",
+  "@simBankColumn": {},
+  "simRateColumn": "Taux",
+  "@simRateColumn": {},
+  "simMonthlyColumn": "Mensualité",
+  "@simMonthlyColumn": {},
+  "simRateAnnual": "{rate} % annuel",
+  "@simRateAnnual": { "placeholders": { "rate": { "type": "int" } } },
+
+  "mapResultsCount": "{count, plural, =1{1 annonce} other{{count} annonces}}",
+  "@mapResultsCount": { "placeholders": { "count": { "type": "int" } } },
+  "mapOffMap": "{count, plural, =1{1 annonce sans localisation} other{{count} annonces sans localisation}}",
+  "@mapOffMap": { "placeholders": { "count": { "type": "int" } } },
+
+  "homeRecentListings": "Annonces récentes",
+  "@homeRecentListings": {},
+  "homeViewMap": "Carte",
+  "@homeViewMap": {},
+  "homeSearchShortcut": "Rechercher un bien…",
+  "@homeSearchShortcut": {}
+}
