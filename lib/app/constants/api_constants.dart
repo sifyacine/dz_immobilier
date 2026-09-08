@@ -12,11 +12,19 @@ class ApiConstants {
   // with SessionExpiredException. There is currently no public listings JSON
   // endpoint (the documented `/api/marketplace/v1/search` returns 404 in prod),
   // so guests browse via this shared account until the backend exposes one.
-  // TODO: replace with a dedicated, least-privilege browse user (or a real
-  // public endpoint) before release — credentials in the binary are a known
-  // tradeoff.
-  static const String browseLogin = 'yacineprom2003@gmail.com';
-  static const String browsePassword = 'Qwerty!23456';
+  //
+  // Passed at build time via --dart-define so the credentials aren't
+  // committed to source control — they're still compiled into the release
+  // binary and extractable from it, which is a known tradeoff. See
+  // docs/MISSING_ENDPOINTS.md #2. Every build MUST supply both, e.g.:
+  //   flutter build apk --release \
+  //     --dart-define=DZ_BROWSE_LOGIN=... --dart-define=DZ_BROWSE_PASSWORD=...
+  // Without them, anonymous/guest browsing will fail (logged-in users are
+  // unaffected — see ApiClient._shouldBrowseLogin).
+  static const String browseLogin =
+      String.fromEnvironment('DZ_BROWSE_LOGIN');
+  static const String browsePassword =
+      String.fromEnvironment('DZ_BROWSE_PASSWORD');
 
   // Web-only flows the app deep-links to (no native screen yet).
   static const String agencySignupUrl =

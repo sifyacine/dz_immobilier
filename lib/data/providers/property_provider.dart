@@ -14,6 +14,17 @@ class PropertyProvider {
   final ApiClient _api;
   PropertyProvider(this._api);
 
+  /// `product.template` fields needed to build a [Property] via [Property.fromOdoo].
+  /// Shared by [search] and [fetchWishlistProperties] so both stay in sync.
+  static const _listFields = [
+    'id', 'name', 'list_price', 'currency_id',
+    'wilaya_id', 'commune_id', 'dz_neighborhood',
+    'dz_surface_m2', 'dz_bedrooms_count', 'dz_bathrooms_count', 'rooms_count',
+    'dz_property_type_label', 'dz_ref_code', 'categ_id',
+    'marketplace_seller_id', 'dz_agent_name', 'dz_agent_phone',
+    'website_url', 'product_variant_id',
+  ];
+
   /// Searches published listings via Odoo `product.template search_read`.
   ///
   /// Translates the app's filter vocabulary to Odoo domain expressions.
@@ -68,15 +79,6 @@ class PropertyProvider {
     if (minPrice != null) domain.add(['list_price', '>=', minPrice]);
     if (maxPrice != null) domain.add(['list_price', '<=', maxPrice]);
 
-    const fields = [
-      'id', 'name', 'list_price', 'currency_id',
-      'wilaya_id', 'commune_id', 'dz_neighborhood',
-      'dz_surface_m2', 'dz_bedrooms_count', 'dz_bathrooms_count', 'rooms_count',
-      'dz_property_type_label', 'dz_ref_code', 'categ_id',
-      'marketplace_seller_id', 'dz_agent_name', 'dz_agent_phone',
-      'website_url',
-    ];
-
     final results = await Future.wait([
       _api.callKw(
         model: 'product.template',
@@ -88,7 +90,7 @@ class PropertyProvider {
         method: 'search_read',
         args: [domain],
         kwargs: {
-          'fields': fields,
+          'fields': _listFields,
           'limit': pageSize,
           'offset': (page - 1) * pageSize,
           'order': sort == 'newest' ? 'id desc' : 'list_price asc',
@@ -158,6 +160,26 @@ class PropertyProvider {
       }
     }
     return map;
+  }
+
+  /// Resolves the listings behind a set of wishlisted product *variant* ids
+  /// (as returned by [fetchWishlist]'s keys) back to full [Property] records,
+  /// via the template whose default variant matches.
+  Future<List<Property>> fetchWishlistProperties(List<int> variantIds) async {
+    if (variantIds.isEmpty) return [];
+    final result = await _api.callKw(
+      model: 'product.template',
+      method: 'search_read',
+      args: [
+        [
+          ['product_variant_id', 'in', variantIds],
+        ],
+      ],
+      kwargs: {'fields': _listFields},
+    );
+    return (result as List? ?? const [])
+        .map((e) => Property.fromOdoo(e as Map<String, dynamic>))
+        .toList();
   }
 
   /// Adds a product *variant* to the wishlist (`POST /shop/wishlist/add`).

@@ -47,7 +47,7 @@ void main() {
     });
 
     test('password length', () {
-      expect(Validators.password('123456'), isNull);
+      expect(Validators.password('12345678'), isNull);
       expect(Validators.password('123'), isNotNull);
     });
   });

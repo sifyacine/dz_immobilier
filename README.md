@@ -63,8 +63,8 @@ Common scripts:
 flutter analyze         # static analysis (lints)
 dart format lib/        # format
 flutter test            # tests
-flutter build apk --release
-flutter build ios --release
+flutter build apk --release --dart-define=DZ_BROWSE_LOGIN=... --dart-define=DZ_BROWSE_PASSWORD=...
+flutter build ios --release --dart-define=DZ_BROWSE_LOGIN=... --dart-define=DZ_BROWSE_PASSWORD=...
 ```
 
 ## Configuration
@@ -73,11 +73,14 @@ flutter build ios --release
   [`lib/app/constants/api_constants.dart`](lib/app/constants/api_constants.dart).
 - The app authenticates against Odoo and persists the **session cookie** (no JWT).
 
-> **Security note:** a shared read‑only "browse" account is currently embedded in
-> `ApiConstants` so guests can read public listings (the backend has no public
-> listings endpoint yet). Replace it with a least‑privilege account or a public
-> API, and move any secrets to a non‑committed config (`.env` / `--dart-define`)
-> before a production release.
+> **Security note:** a shared read‑only "browse" account lets guests read public
+> listings (the backend has no public listings endpoint yet). The credentials are
+> passed at build time via `--dart-define=DZ_BROWSE_LOGIN=...
+> --dart-define=DZ_BROWSE_PASSWORD=...` (see `ApiConstants.browseLogin`) rather than
+> committed to source. This only keeps them out of git history going forward — they
+> are still compiled into the release binary and extractable from it. Replace this
+> account with a least‑privilege one or a real public API before relying on it long
+> term; see `docs/MISSING_ENDPOINTS.md` #2.
 
 ## Internationalization
 

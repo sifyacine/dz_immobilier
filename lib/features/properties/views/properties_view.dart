@@ -23,7 +23,14 @@ class PropertiesView extends GetView<PropertiesController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppAppBar(onMenuTap: () => Get.toNamed(Routes.components)),
+      appBar: AppAppBar(
+        onMenuTap: () => Get.snackbar(
+          context.l10n.commonSoonAvailable,
+          '',
+          snackPosition: SnackPosition.TOP,
+          duration: const Duration(seconds: 2),
+        ),
+      ),
       body: RefreshIndicator(
         onRefresh: controller.loadProperties,
         child: NotificationListener<ScrollNotification>(

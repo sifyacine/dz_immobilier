@@ -9,6 +9,7 @@ import '../../../core/storage/storage_service.dart';
 import '../../../data/models/property_detail_model.dart';
 import '../../../data/models/property_model.dart';
 import '../../../data/repositories/property_repository.dart';
+import '../../favorites/controllers/favorites_controller.dart';
 import '../widgets/offer_sheet.dart';
 
 /// Loads a single listing and drives the detail screen's actions.
@@ -99,11 +100,19 @@ class PropertyDetailController extends GetxController {
         await _repository.addToWishlist(d.variantId);
         await _syncWishlist(); // resolve the new wishlist record id
       }
+      _syncFavoritesTab();
     } catch (_) {
       isFavorite.value = wasFavorite; // revert on failure
       Get.snackbar('Erreur', 'Action impossible. Réessayez.',
           snackPosition: SnackPosition.TOP, duration: const Duration(seconds: 2));
     }
+  }
+
+  /// Keeps the Wishlist tab in sync with a toggle made from this screen.
+  /// Best-effort — the tab also reloads from the server on every visit.
+  void _syncFavoritesTab() {
+    if (!Get.isRegistered<FavoritesController>()) return;
+    Get.find<FavoritesController>().load();
   }
 
   void _promptLogin() {

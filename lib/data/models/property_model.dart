@@ -23,6 +23,7 @@ class Property {
   final bool isFeatured;
   final String slug; // Odoo product URL slug
   final String sellerName;
+  final int variantId; // product.product id — required by the wishlist API
 
   const Property({
     required this.id,
@@ -41,6 +42,7 @@ class Property {
     this.isFeatured = false,
     this.slug = '',
     this.sellerName = '',
+    this.variantId = 0,
   });
 
   String? get thumbnail => images.isNotEmpty ? images.first : null;
@@ -107,6 +109,7 @@ class Property {
       area: (json['dz_surface_m2'] as num?)?.toDouble() ?? 0,
       slug: websiteUrl,
       sellerName: _m2oName(json['marketplace_seller_id']),
+      variantId: _m2oId(json['product_variant_id']),
       images: [
         '${ApiConstants.baseUrl}/web/image/product.template/$id/image_512',
       ],
@@ -116,6 +119,12 @@ class Property {
   /// Extracts the display name from an Odoo many2one pair `[id, "Name"]`.
   static String _m2oName(dynamic value) =>
       (value is List && value.length > 1) ? value[1].toString() : '';
+
+  /// Extracts the id from an Odoo many2one pair `[id, "Name"]`.
+  static int _m2oId(dynamic value) =>
+      (value is List && value.isNotEmpty && value.first is int)
+          ? value.first as int
+          : 0;
 
   /// Translates English product-category names to French listing labels.
   static String _mapCategoryName(String name) {
@@ -181,6 +190,7 @@ class Property {
         isFeatured: json['is_featured'] as bool? ?? false,
         slug: json['slug'] as String? ?? '',
         sellerName: json['seller_name'] as String? ?? '',
+        variantId: json['variant_id'] as int? ?? 0,
       );
 
   Map<String, dynamic> toJson() => {
@@ -200,6 +210,7 @@ class Property {
         'is_featured': isFeatured,
         'slug': slug,
         'seller_name': sellerName,
+        'variant_id': variantId,
       };
 
   static String _mapPropertyType(String apiType) {

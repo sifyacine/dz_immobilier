@@ -15,7 +15,17 @@ class ShellController extends GetxController {
     }
   }
 
-  void goTo(int index) => currentIndex.value = index;
+  void goTo(int index) {
+    currentIndex.value = index;
+    // Wishlist tab (index 2) — reload from the server on every visit so it
+    // reflects favorites toggled elsewhere (e.g. the property detail screen)
+    // and picks up login/logout state changes.
+    if (index == 2) {
+      try {
+        Get.find<FavoritesController>().load();
+      } catch (_) {}
+    }
+  }
 
   void onFabTap() => Get.toNamed(Routes.simulation);
 }

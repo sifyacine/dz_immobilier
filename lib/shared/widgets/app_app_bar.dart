@@ -8,12 +8,10 @@ import 'app_logo.dart';
 /// A custom floating, pill-shaped App Bar that matches the style
 /// of the bottom navigation bar.
 class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final VoidCallback? onCartTap;
   final VoidCallback? onMenuTap;
 
   const AppAppBar({
     super.key,
-    this.onCartTap,
     this.onMenuTap,
   });
 
@@ -47,14 +45,6 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
                   color: isDark ? Colors.white : null,
                 ),
                 const Spacer(),
-                IconButton(
-                  icon: Icon(
-                    Icons.shopping_cart_outlined,
-                    color: iconColor,
-                    size: 24,
-                  ),
-                  onPressed: onCartTap ?? () {},
-                ),
                 IconButton(
                   icon: Icon(
                     Icons.menu_rounded,

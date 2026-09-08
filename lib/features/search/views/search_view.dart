@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../app/constants/app_constants.dart';
+import '../../../app/routes/app_routes.dart';
 import '../../../app/theme/app_colors.dart';
 import '../../../app/theme/app_gradients.dart';
 import '../../../app/theme/app_text_styles.dart';
@@ -378,18 +379,10 @@ class _SearchViewState extends State<SearchView> {
                       final property = results[i];
                       return SearchPropertyCard(
                         property: property,
-                        onTap: () {
-                          // View details or show info message
-                          Get.snackbar(
-                            property.title,
-                            context.l10n.searchDetailSoon,
-                            snackPosition: SnackPosition.BOTTOM,
-                            backgroundColor: isDark
-                                ? AppColors.darkCard
-                                : Colors.grey.shade100,
-                            colorText: isDark ? Colors.white : AppColors.textPrimary,
-                          );
-                        },
+                        onTap: () => Get.toNamed(
+                          Routes.propertyDetail,
+                          arguments: property,
+                        ),
                       );
                     },
                   ),

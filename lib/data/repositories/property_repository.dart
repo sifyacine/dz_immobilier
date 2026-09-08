@@ -19,6 +19,8 @@ class PropertyRepository {
 
   /// Wishlist (requires a logged-in user session).
   Future<Map<int, int>> fetchWishlist() => _provider.fetchWishlist();
+  Future<List<Property>> fetchWishlistProperties(List<int> variantIds) =>
+      _provider.fetchWishlistProperties(variantIds);
   Future<void> addToWishlist(int variantId) =>
       _provider.addToWishlist(variantId);
   Future<void> removeFromWishlist(int wishId) =>

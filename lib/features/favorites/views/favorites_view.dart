@@ -10,6 +10,8 @@ import '../../../app/theme/app_gradients.dart';
 import '../../../app/theme/app_text_styles.dart';
 import '../../../core/storage/storage_service.dart';
 import '../../../data/models/property_model.dart';
+import '../../../shared/widgets/app_button.dart';
+import '../../shell/controllers/shell_controller.dart';
 import '../controllers/favorites_controller.dart';
 
 class FavoritesView extends GetView<FavoritesController> {
@@ -31,6 +33,31 @@ class FavoritesView extends GetView<FavoritesController> {
           if (controller.isLoading.value) {
             return const Center(
               child: CircularProgressIndicator(),
+            );
+          }
+
+          // ── Error state ──────────────────────────────────────────────
+          if (controller.error.isNotEmpty) {
+            return Center(
+              child: Padding(
+                padding: const EdgeInsets.all(AppConstants.spacingLg),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.cloud_off,
+                        size: 48, color: AppColors.textHint),
+                    const SizedBox(height: AppConstants.spacingMd),
+                    Text(controller.error.value, textAlign: TextAlign.center),
+                    const SizedBox(height: AppConstants.spacingMd),
+                    AppButton(
+                      label: 'Réessayer',
+                      icon: Icons.refresh,
+                      expanded: false,
+                      onPressed: controller.load,
+                    ),
+                  ],
+                ),
+              ),
             );
           }
 
@@ -125,6 +152,10 @@ class FavoritesView extends GetView<FavoritesController> {
                             property: list[i],
                             onRemove: () =>
                                 controller.remove(list[i]),
+                            onTap: () => Get.toNamed(
+                              Routes.propertyDetail,
+                              arguments: list[i],
+                            ),
                           ),
                         ),
                         childCount: list.length,
@@ -216,10 +247,12 @@ class _FilterRow extends GetView<FavoritesController> {
 class _WishlistCard extends StatelessWidget {
   final Property property;
   final VoidCallback onRemove;
+  final VoidCallback onTap;
 
   const _WishlistCard({
     required this.property,
     required this.onRemove,
+    required this.onTap,
   });
 
   String get _price {
@@ -252,7 +285,7 @@ class _WishlistCard extends StatelessWidget {
         ),
         child: InkWell(
           borderRadius: BorderRadius.circular(AppConstants.radiusMd),
-          onTap: () {},
+          onTap: onTap,
           child: Row(
             children: [
               // ── Thumbnail ───────────────────────────────────────────
@@ -464,12 +497,9 @@ class _EmptyState extends StatelessWidget {
                   shape: const StadiumBorder(),
                   child: InkWell(
                     onTap: () {
-                      // Navigate back to home tab
+                      // Navigate back to the Home tab
                       try {
-                        final shell =
-                            Get.find<GetxController>(tag: 'shell');
-                        // ignore: avoid_dynamic_calls
-                        (shell as dynamic).goTo(0);
+                        Get.find<ShellController>().goTo(0);
                       } catch (_) {}
                     },
                     child: Center(
